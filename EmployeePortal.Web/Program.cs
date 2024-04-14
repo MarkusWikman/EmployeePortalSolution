@@ -1,7 +1,14 @@
+using EmployeePortal.Web.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+builder.Services.AddDbContext<EmployeePortalDbContext>(options => 
+options.UseSqlServer(builder.Configuration.GetConnectionString("EmployeePortal")));
 
 var app = builder.Build();
 

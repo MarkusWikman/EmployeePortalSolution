@@ -70,5 +70,20 @@ namespace EmployeePortal.Web.Controllers
 
             return RedirectToAction("List", "Employees");
         }
+        [HttpPost]
+        public async Task<IActionResult> Delete(Employee viewModel)
+        {
+            var employee = await dbContext.Employees
+                .AsNoTracking()
+                .FirstOrDefaultAsync(x => x.Id == viewModel.Id);
+
+            if(employee is not null)
+            {
+                dbContext.Employees.Remove(employee);
+                await dbContext.SaveChangesAsync();
+            }
+
+            return RedirectToAction("List", "Employees");
+        }
     }
 }

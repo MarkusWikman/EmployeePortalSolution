@@ -1,6 +1,8 @@
-﻿namespace EmployeePortal.Web.Models.Entities
+﻿using EmployeePortal.Web.Models.Entities;
+
+namespace EmployeePortal.Web.Models
 {
-    public class Employee
+    public class AddEmployeeViewModel
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
@@ -9,10 +11,5 @@
         public decimal Salary { get; set; }
         public bool Subscribed { get; set; }
         public Position Position { get; set; }
-    }
-
-    public enum Position
-    {
-        Receptionist, Accountant, Developer, Cleaner, Manager
     }
 }

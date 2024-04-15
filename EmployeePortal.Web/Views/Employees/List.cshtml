@@ -20,6 +20,13 @@
         </tr>
     </thead>
     <tbody>
+        @if(Model.Count == 0)
+        {
+            <p>Oh, so empty.. and so sad :(</p>
+            <p>Press "Add new employee" to add some employees</p>
+        }
+        else
+        {
         @foreach (var employee in Model)
         {
             <tr>
@@ -34,6 +41,7 @@
                 </td>
 
             </tr>
+        }
         }
     </tbody>
 </table>

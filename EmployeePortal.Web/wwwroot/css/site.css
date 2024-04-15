@@ -20,3 +20,11 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.portal-image {
+    max-width: 70%; /* Adjust the percentage as needed */
+    height: auto;
+    margin-top: 15px; /* Adjust as needed */
+    border-radius: 50px; /* Adjust the radius as needed */
+}
+

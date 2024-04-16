@@ -23,7 +23,7 @@ body {
 
 .portal-image {
     max-width: 70%; /* Adjust the percentage as needed */
-    height: auto;
+    height: 150px;
     margin-top: 15px; /* Adjust as needed */
     border-radius: 50px; /* Adjust the radius as needed */
 }

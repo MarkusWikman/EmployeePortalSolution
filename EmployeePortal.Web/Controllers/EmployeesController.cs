@@ -35,7 +35,7 @@ namespace EmployeePortal.Web.Controllers
             await dbContext.Employees.AddAsync(employee);
             await dbContext.SaveChangesAsync();
 
-            return View();
+            return RedirectToAction(nameof(Add));
         }
         [HttpGet]
         public async Task<IActionResult> List()
